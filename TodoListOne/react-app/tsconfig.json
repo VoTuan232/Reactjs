@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "http://127.0.0.1:2302/",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
