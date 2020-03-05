@@ -12,10 +12,26 @@ import ClassClick from "./components/ClassClick";
 import EventBinding from "./components/EventBinding";
 import ParentComponent from "./components/ParentComponent";
 import NameList from "./components/NameList";
+import StyleSheet from "./components/StyleSheet";
+import Inline from "./components/Inline";
+import './appStyles.scss';
+import styles from './appStyles.module.css';
+import Form from './components/Form';
+import LifeCycleA from './components/LifeCycleA';
 
 function App() {
   return (
     <div className="App">
+      LifeCycle A
+      <LifeCycleA />
+      Form
+      <Form />
+      <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1>
+      Inline
+      <Inline />
+      Style sheet
+      <StyleSheet primary={true} />
       List Rendering
       <NameList />
       Methods as props
