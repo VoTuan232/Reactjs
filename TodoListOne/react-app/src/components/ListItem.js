@@ -12,7 +12,7 @@ class ListItem extends Component {
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:2302/user/get-all')
+    fetch('http://127.0.0.1:2302/car_makers')
       .then(res => res.json())
       .then(
         result => {
@@ -42,11 +42,11 @@ class ListItem extends Component {
       listItems = <div>Loading...</div>;
     } else {
       console.log('here');
-      listItems = this.state.data.users.map((x, index) => (
-        <tr key={index}>
-          <Item data={x} key={++index} />
-        </tr>
-      ));
+      // listItems = this.state.data.users.map((x, index) => (
+      //   <tr key={index}>
+      //     <Item data={x} key={++index} />
+      //   </tr>
+      // ));
     }
     return (
       <div className="panel panel-success">
