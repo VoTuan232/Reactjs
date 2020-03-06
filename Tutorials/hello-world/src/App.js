@@ -14,19 +14,44 @@ import ParentComponent from "./components/ParentComponent";
 import NameList from "./components/NameList";
 import StyleSheet from "./components/StyleSheet";
 import Inline from "./components/Inline";
-import './appStyles.scss';
-import styles from './appStyles.module.css';
-import Form from './components/Form';
-import LifeCycleA from './components/LifeCycleA';
+import "./appStyles.scss";
+import styles from "./appStyles.module.css";
+import Form from "./components/Form";
+import LifeCycleA from "./components/LifeCycleA";
+import FragmentDemo from "./components/FragmentDemo";
+import ParentComp from "./components/ParentComp";
+import MemoParentComp from "./components/MemoParentComp";
+import Refs from "./components/Refs";
+import RefDemo from "./components/RefDemo";
+import FocusInput from "./components/FocusInput";
+import FRParentInput from "./components/FRParentInput";
+import PortalDemo from "./components/PortalDemo";
+import HeroError from "./components/HeroError";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <div className="App">
+      <ErrorBoundary>
+        <HeroError name="Error Boudary" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <HeroError name="joker" />
+      </ErrorBoundary>
+      <PortalDemo />
+      <FRParentInput />
+      <FocusInput />
+      <RefDemo />
+      <Refs />
+      <MemoParentComp />
+      <ParentComp />
+      Fragment
+      <FragmentDemo />
       LifeCycle A
       <LifeCycleA />
       Form
       <Form />
-      <h1 className='error'>Error</h1>
+      <h1 className="error">Error</h1>
       <h1 className={styles.success}>Success</h1>
       Inline
       <Inline />
