@@ -28,10 +28,14 @@ import FRParentInput from "./components/FRParentInput";
 import PortalDemo from "./components/PortalDemo";
 import HeroError from "./components/HeroError";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/higher_order_component/ClickCounter";
+import MouseHover from "./components/higher_order_component/MouseHover";
 
 function App() {
   return (
     <div className="App">
+      <ClickCounter />
+      <MouseHover />
       <ErrorBoundary>
         <HeroError name="Error Boudary" />
       </ErrorBoundary>
