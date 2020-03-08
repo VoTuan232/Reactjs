@@ -30,10 +30,35 @@ import HeroError from "./components/HeroError";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ClickCounter from "./components/higher_order_component/ClickCounter";
 import MouseHover from "./components/higher_order_component/MouseHover";
+import ClickCounterWithHigherOrderComponent from "./components/higher_order_component/ClickCounterWithHigherOrderComponent";
+import MouseHoverWithHigherComponent from "./components/higher_order_component/MouseHoverWithHigherComponent";
+import User from "./components/render_props/User";
+import CounterRenderProp from "./components/render_props/Counter";
+import ClickCounterTwo from "./components/render_props/ClickCounterTwo";
+import MouseHoverTwo from "./components/render_props/MouseHoverTwo";
+import ComponentC from "./components/context/ComponentC";
+import PostList from "./components/http/PostList";
+import PostForm from "./components/http/PostForm";
 
 function App() {
   return (
     <div className="App">
+      <PostForm />
+      <PostList />
+      <ComponentC />
+      <User name={isLoggedId => (isLoggedId ? "VOTUAN" : "GUEST")} />
+      <CounterRenderProp
+        render={(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      />
+      <CounterRenderProp
+        render={(count, incrementCount) => (
+          <MouseHoverTwo count={count} incrementCount={incrementCount} />
+        )}
+      />
+      <ClickCounterWithHigherOrderComponent name="ClickCounterWithHigherOrderComponent at App" />
+      <MouseHoverWithHigherComponent name="MouseHoverWithHigherComponent at App" />
       <ClickCounter />
       <MouseHover />
       <ErrorBoundary>

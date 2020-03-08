@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class MouseHover extends Component {
+class Counter extends Component {
   constructor(props) {
     super(props);
 
@@ -18,16 +18,10 @@ export class MouseHover extends Component {
   };
 
   render() {
-    const { count } = this.state;
     return (
-      <>
-        <h1>Not use Higher Order Component(Mouse hover increment)</h1>
-        <button onMouseOver={this.incrementHandler}>
-          Mouse over {count} times
-        </button>
-      </>
+      <div>{this.props.render(this.state.count, this.incrementHandler)}</div>
     );
   }
 }
 
-export default MouseHover;
+export default Counter;
