@@ -15,7 +15,7 @@ function DataFetching() {
       .catch(err => {
         console.log(err);
       });
-  }, [idFromButtonClick]);
+  }, [idFromButtonClick]); // condition to run again => idFromButtonClick change
 
   const handleClick = () => {
     setIdFromButtonClick(id);
