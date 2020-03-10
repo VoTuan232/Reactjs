@@ -5,9 +5,7 @@ export class ClickCounterTwo extends Component {
     const { count, incrementCount } = this.props;
     return (
       <>
-        <button onClick={incrementCount}>
-          Render Props Click {count} times
-        </button>
+        <button onClick={incrementCount}>Click {count} times</button>
       </>
     );
   }

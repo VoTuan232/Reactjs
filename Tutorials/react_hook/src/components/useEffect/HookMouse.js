@@ -14,12 +14,12 @@ function HookMouse() {
     console.log("useFffect called");
     window.addEventListener("mousemove", logMousePosition);
 
-    // clean up here
+    // clean up here: Unmount Here
     return () => {
       console.log("Component unmounting code");
       window.removeEventListener("mousemove", logMousePosition);
     };
-  }, []); // add [] để log 1 lần
+  }, []); // add [] để add điều kiện chạy 1 lần
 
   return (
     <div>

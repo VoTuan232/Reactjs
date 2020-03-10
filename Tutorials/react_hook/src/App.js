@@ -21,6 +21,15 @@ import ReducerWithUseContextB from "./components/reducer/ReducerWithUseContextB"
 import ReducerWithUseContextA from "./components/reducer/ReducerWithUseContextA";
 import DataFetchingWithState from "./components/reducer/DataFetchingWithState";
 import DataFetchingWithReduce from "./components/reducer/DataFetchingWithReduce";
+import ParentComponent from "./components/useCallback/ParentComponent";
+import Counter from "./components/memo/Counter";
+import FocusInput from "./components/ref/FocusInput";
+import HookTimer from "./components/ref/HookTimer";
+import DocTitleOne from "./components/customHook/DocTitleOne";
+import DocTitleTwo from "./components/customHook/DocTitleTwo";
+import CounterOne from "./components/customHook/CounterOne";
+import CounterTwo from "./components/customHook/CounterTwo";
+import UserForm from "./components/customHook/UserForm";
 
 // useContext
 export const UserContext = React.createContext();
@@ -74,6 +83,18 @@ function App() {
         <ReducerWithUseContextB />
         <DataFetchingWithState />
         <DataFetchingWithReduce />
+        <ParentComponent />
+        <Counter />
+        <FocusInput />
+        <HookTimer />
+        <h1>Custom Hook Change Document Title:</h1>
+        <DocTitleOne />
+        <DocTitleTwo />
+        <h1>Custom Hook Counter</h1>
+        <CounterOne />
+        <CounterTwo />
+        <h1>Custom Hook Form</h1>
+        <UserForm />
       </div>
     </CountContext.Provider>
   );

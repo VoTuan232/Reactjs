@@ -47,6 +47,7 @@ function App() {
       <PostList />
       <ComponentC />
       <User name={isLoggedId => (isLoggedId ? "VOTUAN" : "GUEST")} />
+      <h1>Render props</h1>
       <CounterRenderProp
         render={(count, incrementCount) => (
           <ClickCounterTwo count={count} incrementCount={incrementCount} />

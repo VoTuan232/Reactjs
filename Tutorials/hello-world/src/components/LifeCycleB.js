@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class LifeCycleB extends Component {
   constructor(props) {
@@ -18,6 +19,19 @@ class LifeCycleB extends Component {
 
   componentDidMount() {
     console.log("LifeCycleB componentDidMount!");
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then(res => {
+        this.setState({
+          posts: [res.data[0]]
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          errorMsg: "Error retreiving data"
+        });
+      });
   }
 
   shouldComponentUpdate() {

@@ -5,9 +5,7 @@ export class MouseHoverTwo extends Component {
     const { count, incrementCount } = this.props;
     return (
       <>
-        <button onMouseOver={incrementCount}>
-          Render Props Mouse over {count} times
-        </button>
+        <button onMouseOver={incrementCount}>Mouse over {count} times</button>
       </>
     );
   }
