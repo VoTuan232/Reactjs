@@ -18,3 +18,5 @@ Finally, -e CHOKIDAR_USEPOLLING=true enables a polling mechanism via chokidar (w
 
 1. docker-compose -f docker-compose.prod.yml up -d --build
 2. docker-compose up -d --build
+3. docker-compose -f docker-compose.prod.yml exec sample-prod sh (or /bin/sh)
+   If /bin/bash fails, you can use /bin/sh that works in more containers:
