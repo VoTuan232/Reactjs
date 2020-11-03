@@ -1,5 +1,16 @@
 FROM node:12.18-alpine
+
+RUN mkdir -p /app
+
 WORKDIR /app
+
 COPY . .
-RUN npm install
-CMD ["npm", "run", "serve"]
+
+USER node
+
+# RUN npx create-react-app /my-app
+
+# WORKDIR /my-app
+# CMD ["npm", "run", "serve"]
+
+# EXPOSE 3000
