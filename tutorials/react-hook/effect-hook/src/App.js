@@ -14,13 +14,13 @@ class App extends Component {
     return (
       <div className="App">
         {/* <ClassCounterOne /> */}
-        <HookCounterOne />
+        {/* <HookCounterOne /> */}
         {/* <ClassMouse></ClassMouse> */}
         {/* <HookMouse></HookMouse> */}
         {/* <MouseContainer /> */}
         {/* <IntervalClassCounter></IntervalClassCounter> */}
         {/* <IntervalHookCounter></IntervalHookCounter> */}
-        {/* <DataFetching /> */}
+        <DataFetching />
       </div>
     );
   }

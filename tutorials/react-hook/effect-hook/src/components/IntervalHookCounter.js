@@ -1,22 +1,18 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
 function IntervalHookCounter() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const tick = () => {
-    setCount(count + 1)
-  }
+    setCount(count + 1);
+  };
   useEffect(() => {
-    const interval = setInterval(tick, 1000)
+    const interval = setInterval(tick, 1000);
     return () => {
-      clearInterval(interval)
-    }
-	}, [count])
-  return (
-    <div>
-      {count}
-    </div>
-  )
+      clearInterval(interval);
+    };
+  }, [count]);
+  return <div>{count}</div>;
 }
 
-export default IntervalHookCounter
+export default IntervalHookCounter;
